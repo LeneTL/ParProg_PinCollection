@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ParProg_Pins
 {
-    enum alleEgenskaper {Balltre, Prins, Wånderbævm };
+    public enum alleEgenskaper {Balltre, Prins, Wånderbævm };
     internal class Egenskap
     {
         private alleEgenskaper minEgenskap;
@@ -24,6 +24,11 @@ namespace ParProg_Pins
 
             }
              
+        }
+
+        public void PrintEgensap()
+        {
+            Console.WriteLine($"{minEgenskap}");
         }
     }
 }

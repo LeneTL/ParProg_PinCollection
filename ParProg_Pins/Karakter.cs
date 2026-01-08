@@ -11,7 +11,7 @@ namespace ParProg_Pins
         private int CurrBensin { get; set; }
         private Egenskap minEgenskap { get; set; }
         private List<Pin> Cowboyhatt = new List<Pin>();
-        private string Lokasjon { get; set; } = "Hjemme";
+        private string Lokasjon { get; set; } = "Hjemmet";
 
         public Karakter(Egenskap egenskap)
         {
@@ -51,6 +51,11 @@ namespace ParProg_Pins
             {
                 Console.WriteLine($"{pin.Navn} sin pin");
             }
+        }
+
+        public void PrintLokasjon()
+        {
+            Console.WriteLine($"Du er i {Lokasjon}");
         }
         
     }
