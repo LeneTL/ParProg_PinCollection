@@ -2,6 +2,8 @@
 {
     internal class Program
     {
+        public static Karakter ourKarakter;
+
         public static List<Pin> pinList = new List<Pin>()
         {
             new Pin("Tønsberg", 120),
@@ -20,7 +22,13 @@
         };
         static void Main(string[] args)
         {
+            Startgame();
+            Console.WriteLine($" kul test: {ourKarakter.Penger}");
+            
+        }
 
+        public static void Startgame()
+        {
             Console.WriteLine("Halla! Nå skal du ut og samle Pins igjen! Denne gangen fra VESTFOLD!!(og telemark)");
             Console.WriteLine("så hva er din egenskap??");
             Console.WriteLine("1. Balltre med glitter");
@@ -30,17 +38,11 @@
             Egenskap våregenskap = new Egenskap(svar);
             Console.Clear();
             Console.WriteLine($"Din egenskap er:");
+            Console.WriteLine($" kul test 2{våregenskap.minEgenskap}");
             våregenskap.PrintEgensap();
 
             Karakter vårkarakter = new Karakter(våregenskap);
-            Travel(vårkarakter);
-
-
-        }
-
-        public static void Startgame()
-        {
-            
+            ourKarakter = vårkarakter;
         }
 
         public static void Travel(Karakter karakter)

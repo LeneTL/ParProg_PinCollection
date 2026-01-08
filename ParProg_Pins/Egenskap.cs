@@ -7,7 +7,7 @@ namespace ParProg_Pins
     public enum alleEgenskaper {Balltre, Prins, Wånderbævm };
     internal class Egenskap
     {
-        private alleEgenskaper minEgenskap;
+        public alleEgenskaper minEgenskap;
 
         public Egenskap(string valg)
         {

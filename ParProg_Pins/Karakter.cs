@@ -6,10 +6,11 @@ namespace ParProg_Pins
 {
     internal class Karakter
     {
-        private int Penger { get; set; } = 300;
+        public int Penger { get; set; } = 300;
         private int MaxBensin { get; set; } = 40;
         private int CurrBensin { get; set; }
-        private Egenskap minEgenskap { get; set; }
+        public Egenskap minEgenskap { get; set; }
+
         private List<Pin> Cowboyhatt = new List<Pin>();
         private string Lokasjon { get; set; } = "Hjemmet";
 
@@ -57,6 +58,9 @@ namespace ParProg_Pins
         {
             Console.WriteLine($"Du er i {Lokasjon}");
         }
+
+
+
         
     }
 
